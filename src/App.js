@@ -1,28 +1,14 @@
 import "./App.scss";
-import Todos from "./components/Todos";
+import Header from "./components/Header";
+import Contact from "./components/Contact";
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      todos: [
-        {
-          id: 1,
-          title: "Task One",
-          done: false
-        },
-        {
-          id: 2,
-          title: "Task two",
-          done: false
-        }
-      ]
-    };
-  }
   render() {
     return (
       <div className="App">
-        <Todos todos={this.state.todos} />
+        <Header branding="Contact Manager" />
+        <Contact name="John" email="jdoe@gmail.com" phone="453-656-6886" />
+        <Contact name="Karen" email="karen@gmail.com" phone="232-656-9987" />
       </div>
     );
   }
